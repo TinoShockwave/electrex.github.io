@@ -7571,8 +7571,19 @@ core-icon {
 <a target="_blank" href="https://www.electroactive.org/">https://www.electroactive.org/</a>
 . See you at the Roboshack! ;)</p>
           
-          
-        </paper-dialog>
+        </paper-dialog></paper-menu-button>
+
+      <paper-menu-button relative="" tabindex="0">
+        <paper-dialog id="search-dialog" heading="Symbol Search" transition="paper-dialog-transition-bottom" role="dialog" layout="" vertical="" aria-label="Symbol Search" tabindex="-1" style="position: fixed; outline: none; display: none;">
+
+          <form id="search_form" onsubmit="return search();">
+          <paper-input-decorator id="paper1" label="Enter company symbol" layout="" vertical="">
+            <input id="symbol_search" is="core-input" value="" committedvalue="" placeholder="Enter company symbol" aria-label="Enter company symbol">
+          </paper-input-decorator>
+          </form>
+
+         </paper-dialog>
+      </paper-menu-button>
 
       <paper-tabs id="tabs" class="bottom fit" selected="all" link="" self-end="" role="tablist" horizontal="" center="" layout="">
         <paper-tab name="all" role="tab" inline="" flex="" center-center="" horizontal="" layout="" class="core-selected" active=""><a class="linkTab" href="/">News</a></paper-tab>
