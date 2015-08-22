@@ -1,4 +1,6 @@
 <html><head><style>template {display: none !important;} /* injected by platform.js */</style><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; } 
+</style><style>template {display: none !important;} /* injected by platform.js */</style><style>body {transition: opacity ease-in 0.2s; } 
 body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
 </style>
 
@@ -7,7 +9,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-  <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="bower_components/webcomponentsjs/webcomponents.js"></script><style type="text/css"></style>
 
   <link href="//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet" type="text/css">
 
@@ -290,7 +292,19 @@ html /deep/ [segment], html /deep/ segment {
 
 </style>
 
-<script src="http://1.daily-stock-forecast.appspot.com/bower_components/polymer/polymer.js"></script><style type="text/css"></style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+<script src="http://1.daily-stock-forecast.appspot.com/bower_components/polymer/polymer.js"></script><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+html /deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+html /deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+html /deep/ [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+html /deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+[touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+</style><style type="text/css"></style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
 html /deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
 [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
 html /deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
@@ -7559,7 +7573,7 @@ core-icon {
         </paper-dialog></paper-menu-button>
 
       <paper-menu-button relative="" tabindex="0">
-        <paper-icon-button id="search-dialog-button" icon="search" role="button" tabindex="0" aria-label="search"></paper-icon-button>
+        
         <paper-dialog id="search-dialog" heading="Symbol Search" transition="paper-dialog-transition-bottom" role="dialog" layout="" vertical="" aria-label="Symbol Search" tabindex="-1" style="position: fixed; outline: none; display: none;">
 
           <form id="search_form" onsubmit="return search();">
@@ -7706,4 +7720,5 @@ core-icon {
 
 
 
-<core-overlay-layer class=""></core-overlay-layer></body></html>
+<core-overlay-layer class=""></core-overlay-layer>
+</body></html>
